@@ -1,37 +1,40 @@
 
 body{
     margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: -0.6px;
 }
 
 .container{
     background-color: #ff5200;
-    height: 780px;
+    height: 799px;
     width: 100%;
+    position: relative;
+    overflow: hidden;
 }
 
 .header{
-    height: 85px;
+    
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 50px;
+    padding: 32px 140px;
     box-sizing: border-box;
 }
 
 .header img{
-    height: 42px;
+    height: 49px;
 }
 
 .left-side{
     display: flex;
     align-items: center;
-    gap: 25px;
+    gap: 30px;
 }
 
 .left-side a{
-    font-size: 15px;
+    font-size: 16px;
     text-decoration: none;
     color: white;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
@@ -43,27 +46,41 @@ body{
     border-width: 1px;
     background-color: #ff5200;
     color: white;
-    height: 42px;
-    width: 100px;
+    padding: 16px 22px;
+    font-size: 100%;
+    font-weight: 500;
+    display: flex;
+    
 }
 #b2{
     border-color: white;
-    border-radius: 12px;
+    border-radius: 19px;
     border: none;
     background-color: #000000;
     color: white;
-    height: 40px;
-    width: 95px;
+    padding: 18px 40px;
+    font-weight: 700;
+    font-size: 88%;
 }
 
 .body-center{
     display: flex;
+    justify-content: center;
 }
 
 .fruits{
-    height: 455px;
+    position: absolute;
+    top: 93px;
+    height: auto;
+    width: 250px;
 }
 
+.fruits-left{
+    left: 0;
+}
+.fruits-right{
+    right: 0;
+}
 
 #content{
     color: white;
@@ -72,7 +89,10 @@ body{
     font-size: clamp(24px, 5vw, 48px);
 }
 
-
+.mainn{
+    position: relative;
+    z-index: 2;
+}
 
 
 .search-bar{
@@ -113,17 +133,29 @@ body{
     justify-content: center;
     align-items: center;
     gap: 12px;
+    margin: 20px 150px;
+    
+}
+embed1{
+    flex: 1;
+    min-width: 0;
 }
 
 .embed1 img{
     width: 100%;
+    height: auto;
+    display: block;
 }
 
 
 
 .shopping{
+    margin: 100px 137px;
+}
+
+.allfood{
     position: relative;
-    margin: 100px 150px;
+    margin-bottom: 60px;
 }
 
 .arrows{
@@ -138,7 +170,7 @@ body{
 .arrow{
     background-color: rgba(128, 128, 128, 0.3);
     display: flex;
-    padding: 7px;
+    padding: 5px;
     border-radius: 22px;
     width: fit-content;
     cursor: pointer;
@@ -151,22 +183,296 @@ body{
     gap: 20px;
 }
 
+
+
 .food-grid::-webkit-scrollbar {
+    display: none;
+}
+.grid::-webkit-scrollbar {
     display: none;
 }
 
 
 .food-items img{
-    width: 200px;
+    width: 160px;
+    
+}
+.grid{
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 40px;
+}
+.grocery-items img{
+    width: 156px;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 22px;
+}
+
+.grocery-items{
+    text-align: center;
     
 }
 
-.instamart-header{
+.grocery-items p{
+    font-size: 20px;
+    font-weight: bold;
+    color: #3f4153;
+    line-height: 1.2;
+    margin: 0;
+}
+
+.resto{
+    border:1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 18px;
+    flex: 0 0 310px;
+    overflow: hidden;
+}
+
+.resto-image{
+    position: relative;
+    color: white;
+}
+.resto-image img{
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block
+}
+.resto-name{
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    font-size: 22px;
+    font-weight: bold;
+    z-index: 2;
+}
+.resto-image::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 70%;
+    background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+}
+.resto-rating {
+    position: absolute;
+    bottom: 20px;
+    right: 15px;
+    background-color: #267E3E; 
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 10px;
+    font-weight: bold;
+    z-index: 2;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    gap: 5px;
 }
-.arrowss{
+.resto-loc{
     display: flex;
-    gap: 12px;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 3px;
+    font-size: 13px;
+    color: #535665;
+    
 }
+.resto-booking{
+    display: inline-flex; 
+    align-items: center;
+    gap: 6px;
+    color: #696b79;
+    background-color: #f4f4f5;
+    padding: 4px 8px;
+    border-radius: 25px;
+    margin: 3px;
+    font-size: 10px;
+}
+.resto-booking img{
+    width: 15px;
+}
+
+.resto-offers {
+   margin: 7px;
+    
+}
+
+.offer-banner {
+    padding: 12px;
+    border-radius: 8px;
+    margin-top: 10px;
+    font-size: 11px;
+    font-weight: 700;
+}
+.pre-booking {
+    background-color: #267E3E;
+    color: white;
+}
+.pre-booking span:first-child {
+    background-color: white;
+    color: #267E3E;
+    padding: 2px 5px;
+    border-radius: 4px;
+    margin-right: 5px;
+}
+.pre-booking span:last-child {
+    float: right;
+    font-size: 10px;
+    opacity: 0.8;
+}
+
+.bank-offer {
+    background-color: #E2F2E5;
+    color: #267E3E;
+}
+
+.apppromo img{
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 110px;
+}
+
+.cities{
+    margin: 0px 200px;
+}
+
+.city-name{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px;
+    margin-bottom: 90px;
+}
+.city{
+    
+    justify-content: center;
+    box-sizing: border-box;
+    border: 1.5px solid rgba(2, 6, 12, 0.15);
+    border-radius: 12px;
+    height: auto;
+    cursor: pointer;
+    flex-basis: calc(25% - 18px); 
+    text-align: center;
+    display: flex;
+    align-items: center;
+
+    
+}
+.city p{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    color: rgba(2, 6, 12, 0.75);
+    
+}
+#showme p{
+    text-align: center;
+    color: rgb(233, 146, 53);
+}
+
+
+.site-footer {
+    background-color: #f0f0f5;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 30px;
+}
+
+.footer-column img {
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+.footer-column p.copyright {
+    font-size: 14px;
+    color: #808080;
+}
+
+.footer-column h4 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #282c3f;
+    margin: 0 0 20px 0;
+}
+
+.footer-column h4.sub-heading {
+    margin-top: 30px;
+}
+
+.footer-column p {
+    margin: 0 0 15px 0;
+    font-size: 15px;
+    color: #808080;
+    cursor: pointer;
+}
+
+.cities-dropdown {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #d4d5d9;
+    padding: 10px 15px;
+    border-radius: 12px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.social-links {
+    display: flex;
+    gap: 20px;
+}
+
+.social-links img {
+    height: 24px;
+    width: 24px;
+    cursor: pointer;
+}
+
+.footer-divider {
+    border: none;
+    border-top: 1px solid #d4d5d9;
+    margin: 40px 0 0 0;
+}
+
+.footer-bottom {
+    background-color: #000000;
+    color: #fff;
+}
+
+.app-download-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+}
+
+.app-download-section h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.app-store-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.app-store-buttons img {
+    height: 54px;
+    cursor: pointer;
+}
+
